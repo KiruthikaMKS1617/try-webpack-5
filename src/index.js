@@ -1,1 +1,2 @@
-console.log("100", 100);
+import generateJoke from "./generateJoke";
+console.log(generateJoke());
