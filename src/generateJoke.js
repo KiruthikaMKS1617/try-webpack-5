@@ -1,4 +1,13 @@
+import axios from "axios";
+
 function generateJoke() {
-  return "Why did the old man fall down the well? He couldn’t see that well.";
+  const config = {
+    headers: {
+      Accept: "application/json",
+    },
+  };
+  axios.get("https://icanhazdadjoke.com", config).then((response) => {
+    document.getElementById("joke").innerHTML = response.data.joke;
+  });
 }
 export default generateJoke;
